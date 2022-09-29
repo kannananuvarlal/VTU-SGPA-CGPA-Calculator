@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <div id="sgpasem-header">
+        <h1>SELECT YOUR SEMESTER</h1>
+    </div>
+    
+    <div id="sem-select">
+        <form action='sgpaphys' method='GET'>
+            <button class = "sem-button" id="sgpa-button">I AND II SEM <br>(PHYS)</button>
+        </form>
+        <form action='sgpachem' method='GET'>
+            <button class = "sem-button" id="sgpa-button">I AND II SEM <br>(CHEM)</button>
+        </form>
+        <form action='sgpasem3' method='GET'>
+            <button class = "sem-button" id="sgpa-button">III SEM</button>
+        </form>
+        <form action='sgpasem4' method='GET'>
+            <button class = "sem-button" id="sgpa-button">IV SEM</button>
+        </form>
+        <form action='sgpasem5' method='GET'>
+            <button class = "sem-button" id="sgpa-button">V SEM</button>
+        </form>
+        <form action='sgpasem6' method='GET'>
+            <button class = "sem-button" id="sgpa-button">VI SEM</button>
+        </form>
+        <form action='sgpasem7' method='GET'>
+            <button class = "sem-button" id="sgpa-button">VII SEM</button>
+        </form>
+        <form action='sgpasem8' method='GET'>
+            <button class = "sem-button" id="sgpa-button">VIII SEM</button>
+        </form>
+    </div>
+</body>
+</html>

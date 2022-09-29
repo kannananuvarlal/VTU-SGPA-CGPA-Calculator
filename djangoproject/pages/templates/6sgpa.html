@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <h1 id="heading">VI SEMESTER SGPA</h1>
+    
+    <form id="enter-marks-form" action="" method="POST">
+        {% csrf_token %}
+        <div id="input-fields">
+            <input class="enter-sgpa" type="text" placeholder="18XX61" name="6sem1">
+            <input class="enter-sgpa" type="text" placeholder="18XX62" name="6sem2">
+            <input class="enter-sgpa" type="text" placeholder="18XX62" name="6sem3">
+            <input class="enter-sgpa" type="text" placeholder="18XX64" name="6sem4">
+            <input class="enter-sgpa" type="text" placeholder="18XX65" name="6sem5">
+            <input class="enter-sgpa" type="text" placeholder="18XXL66" name="6sem6">
+            <input class="enter-sgpa" type="text" placeholder="18XXL67" name="6sem7">
+            <input class="enter-sgpa" type="text" placeholder="18XXMP68" name="6sem8">
+        </div>
+        <button id="calc-sgpa-button">CALCULATE <br>SGPA</button>
+    </form>
+    {% if my_data6 %}
+        <h1 id="final-display">SGPA: {{ my_data6 }}</h1>
+    {% endif %}
+</body>
+</html>
