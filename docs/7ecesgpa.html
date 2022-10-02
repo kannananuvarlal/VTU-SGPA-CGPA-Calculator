@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1 id="heading">VII SEMESTER E&E/ECE/CIVIL</h1>
+    
+    <form id="enter-marks-form" action="" method="POST">
+        {% csrf_token %}
+        <div id="input-fields">
+            <input class="enter-sgpa" type="text" placeholder="18XX71" name="7sem1">
+            <input class="enter-sgpa" type="text" placeholder="18XX72" name="7sem2">
+            <input class="enter-sgpa" type="text" placeholder="18XX73X" name="7sem3">
+            <input class="enter-sgpa" type="text" placeholder="18XX74X" name="7sem4">
+            <input class="enter-sgpa" type="text" placeholder="18XX75X" name="7sem5">
+            <input class="enter-sgpa" type="text" placeholder="18XXL76" name="7sem6">
+            <input class="enter-sgpa" type="text" placeholder="18XXL77" name="7sem7">
+            <input class="enter-sgpa" type="text" placeholder="18XXP78" name="7sem8">
+        </div>
+        <button id="calc-sgpa-button">CALCULATE <br>SGPA</button>
+    </form>
+    {% if my_data72 %}
+        <h1 id="final-display">SGPA: {{ my_data72 }}</h1>
+    {% endif %}
+</body>
+</html>

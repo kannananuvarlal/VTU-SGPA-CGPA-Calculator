@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1 id="heading">I AND II SEMESTER CHEMISTRY CYCLE</h1>
+    
+    <form id="enter-marks-form" action="" method="POST">
+        {% csrf_token %}
+        <div id="input-fields">
+            <input class="enter-sgpa" type="text" placeholder="18MAT11/21" name="math21">
+            <input class="enter-sgpa" type="text" placeholder="18CHE12/22" name="chem12">
+            <input class="enter-sgpa" type="text" placeholder="18CPS13/23" name="cps12">
+            <input class="enter-sgpa" type="text" placeholder="18ELN14/24" name="eln12">
+            <input class="enter-sgpa" type="text" placeholder="18ME15/25" name="me12">
+            <input class="enter-sgpa" type="text" placeholder="18CHEML16/26" name="cheml12">
+            <input class="enter-sgpa" type="text" placeholder="18CPL17/27" name="cpl12">
+            <input class="enter-sgpa" type="text" placeholder="18EGH18/28 (ENGLISH)" name="eng21">
+        </div>
+        <button id="calc-sgpa-button">CALCULATE <br>SGPA</button>
+    </form>
+    {% if my_data2 %}
+        <h1 id="final-display">SGPA: {{ my_data2 }}</h1>
+    {% endif %}
+</body>
+</html>
