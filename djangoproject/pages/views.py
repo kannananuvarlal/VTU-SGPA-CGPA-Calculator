@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home_view(request):
-    return render(request, "base.html", {})
+    return render(request, "index.html", {})
 
 def cgpa_calc(request):
     if request.method == "POST":
